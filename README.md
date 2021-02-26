@@ -12,7 +12,7 @@ The purpose of this service is to create multiple recurring tasks on the fly usi
 2. Configure AWS
 
 # Installation
-serverless deploy -v
+```serverless deploy -v```
 
 # Test
 ```aws dynamodb put-item --table-name JobsTable --item '{"leadSourceId": {"S": "20"}, "cronExpression": {"S": "rate(2 minutes)"}}'```
