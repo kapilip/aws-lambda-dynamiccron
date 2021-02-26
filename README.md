@@ -6,3 +6,13 @@ The purpose of this service is to create multiple recurring tasks on the fly usi
 2. It triggers(dynamo stream) a lambda function that create a cloudwatch rule for this entry.
 3. An alarm triggers on a SNS topic with data entry
 4. A final lambda function is triggered and it can utilize the data entry from dynamodb table to process it's business logic
+
+# Prerequisites
+1. Install Serverless
+2. Configure AWS
+
+# Installation
+serverless deploy -v
+
+# Test
+```aws dynamodb put-item --table-name JobsTable --item '{"leadSourceId": {"S": "20"}, "cronExpression": {"S": "rate(2 minutes)"}}'```
