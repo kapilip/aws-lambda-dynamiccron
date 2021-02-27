@@ -8,8 +8,8 @@ The purpose of this service is to create multiple recurring tasks on the fly usi
 4. A final lambda function is triggered and it can utilize the data entry from dynamodb table to process it's business logic
 
 # Prerequisites
-1. Install Serverless
-2. Configure AWS
+1. [Install Serverless](https://www.serverless.com/framework/docs/getting-started/)
+2. [Configure AWS](https://www.serverless.com/framework/docs/providers/aws/cli-reference/config-credentials/)
 
 # Installation
 ```serverless deploy -v```
